@@ -1,5 +1,9 @@
 # CSS
 
+
+
+
+
 CSS的出现是为了美化HTML的，并且让结构(HTML)与样式(CSS)分离;
 
 - 美化方式一:为HTML添加各种各样的样式，比如颜色、字体、大小、下划线等等; 
@@ -438,7 +442,7 @@ body, p, div, h2, span {
 ### 后代选择器(重要)
 
 - 后代选择器一: 所有的后代(**直接/间接的后代**)
-  - 选择器之间以空格分割
+  - 选择器之间以**空格**分割
 
 ![后代选择器](/Users/wsp/Documents/Front-End/Code/Learn_HTML_CSS/img/后代选择器.png)
 
@@ -661,4 +665,121 @@ Pseudo-classes
 *除了a元素，:hover、:active也能用在其他元素上*
 
 直接给**元素**设置样式，相当于给**元素的所有动态伪类**都设置了
+
+#### 伪元素
+
+**常用的伪元素有**
+
+- :first-line、`::first-line` (了解)
+  - ::first-line可以针对首行文本设置属性
+  - ::first-letter可以针对首字母设置属性
+  
+- :first-letter、`::first-letter`(了解)
+
+- **:before**、`::before` **(常用)**
+
+- **:after**、`::after` **(常用)**
+  - 用来在一个元素的内容**之前或之后插入其他内容(可以是文字、图片)**
+    - 常通过 **content 属性**来为一个**行内级元素**添加修饰性的内容。,不能将`content:""`省略
+    
+      
+
+为了区分伪元素和伪类，建议伪元素**使用2个冒号**，比如::first-line
+
+```html
+      <style>
+      .box::first-line {
+      font-size: 30px;
+      color: orange;
+    }
+
+    .box::first-letter {
+      font-size: 50px;
+      color: blue;
+    }
+  </style>
+  <div class="box">
+    <span class="keyword">雁门关，别名西陉关 ，坐落于我国山西省忻</span>州市代县以北约成员国20千米的雁门山。它是长城上的一个关键大关，与宁武关、偏关并称之为“外三关”。坐落于偏关县大河上，辖四侧墙，总长度数百公里。迄今仍有30千米储存完好无损，所有用砖遮盖，沿堤岸耸立，十分壮阔。“边关丁宁岩，山连紫塞，地控大河北，鑫城携手共进强。”这也是前人对偏关的赞扬。早在春秋战国时代，这儿便是赵武灵王攻克胡林的竞技场。唐朝名将在关东建有九龙庙，宋代建有魏镇、杨三关。现有的关城始建明洪武二十三年，是重点学科文物古迹。
+  </div>
+  	
+```
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .before {
+      color: red;
+    }
+
+    .after {
+      color: blue;
+    }
+
+    /* 伪元素 */
+    .item::before {
+      content: "321";
+      color: orange;
+      font-size: 20px;
+    }
+
+    .item::after {
+      /* content: "cba"; */
+      content: url("../images/hot_icon.svg");
+      color: green;
+      font-size: 20px;
+
+      /* 位置不是很好看(以后) */
+      position: relative; /* 相对定位 */
+      left: 5px;
+      top: 2px;
+    }
+
+    /* .new::after {
+      content: url("../images/new_icon.svg");
+    } */
+
+    /* 额外的补充 */
+    /* ::after是一个行内级元素 */
+    .box5::after {
+      /* 使用伪元素的过程中, 不要将content省略 */
+      content: "";
+
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background-color: #f00;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="box">
+    <span class="before">123</span>
+    我是div元素
+    <span class="after">abc</span>
+  </div>
+
+  <div class="box2">
+    <span class="before">123</span>
+    我是box2
+    <span class="after">abc</span>
+  </div>
+
+  <!-- 伪元素方案 -->
+<!-- 直接在要加的class后面加上 item -->
+  <div class="box3 item">我是box3</div>
+  <div class="box4 item">我是box4</div>
+
+  <!-- 伪元素的补充 -->
+  <div class="box5">我是box5</div>
+
+</body>
+</html>
+```
 

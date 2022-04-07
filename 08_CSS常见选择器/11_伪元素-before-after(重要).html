@@ -41,8 +41,8 @@
     /* ::after是一个行内级元素 */
     .box5::after {
       /* 使用伪元素的过程中, 不要将content省略 */
+      /* 加入8*8正方形 */
       content: "";
-
       display: inline-block;
       width: 8px;
       height: 8px;
@@ -65,6 +65,7 @@
   </div>
 
   <!-- 伪元素方案 -->
+<!-- 直接在要加的class后面加上 item -->
   <div class="box3 item">我是box3</div>
   <div class="box4 item">我是box4</div>
 
