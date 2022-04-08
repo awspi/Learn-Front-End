@@ -73,6 +73,8 @@ max-height:最大高度，无论内容多少，高度都小于或等于max-heigh
 
  padding属性用于设置盒子的内边距, 通常用于**设置边框和内容之间的间距;**
 
+- **在父子元素中,父元素设置padding,如果不想父元素被子元素撑大,可以设置` box-sizing: border-box;`**
+
 padding包括四个方向, 所以有如下的取值: 
 
 - `padding-top`:上内边距
@@ -207,3 +209,197 @@ border-radius事实上是一个**缩写属性**:
 如果一个元素是正方形, **设置border-radius大于或等于50%时，就会变成一个圆.**
 
 ![border-radius](/Users/wsp/Documents/Front-End/Code/Learn_HTML_CSS/img/border-radius.png)
+
+
+
+## 外边距 - margin
+
+**margin属性用于设置盒子的外边距, 通常用于元素和元素之间的间距;**  
+
+margin包括四个方向, 所以有如下的取值: 
+
+- `margin-top`:上内边距
+- `margin-right`:右内边距
+- `margin-bottom`:下内边距
+- `margin-left`:左内边距
+
+*行内级元素设置上下无效*
+
+margin单独编写是一个**缩写属性**:
+
+- margin-top、margin-right、margin-bottom、margin-left的简写属性
+-  margin缩写属性是从零点钟方向开始, 沿着顺时针转动的, 也就是**上右下左;**
+
+margin也并非必须是四个值, 也可以有其他值;
+
+![margin](/Users/wsp/Documents/Front-End/Code/Learn_HTML_CSS/img/margin.png)
+
+
+
+###  上下margin的传递
+
+**margin-top传递**
+
+如果**块级元素的顶部线和父元素的顶部线重叠**，那么**这个块级元素的margin-top值会传递给父元素** 
+
+**margin-bottom传递** 比较少见
+
+如果**块级元素的底部线和父元素的底部线重叠，并且父元素的高度是auto(默认)，那么这个块级元素的margin-bottom值会传递给父元素**
+
+**如何防止出现传递问题?**
+
+- **给父元素设置padding-top\padding-bottom而不是让子元素设置margin**
+- **给父元素设置border** `border: 1px solid transparent */` 边框设置为0,还是会传递
+- **触发外层BFC**: 设置overflow为auto
+  - BFC:block formatting context 为块设置独立空间不受影响
+
+**建议**
+
+- `margin`一般是用来设置**兄弟元素之间的间距**
+- `padding`一般是用来设置**父子元素之间的间距**
+  - 父元素设置padding  `box-sizing: border-box;`
+
+
+
+### 上下margin的折叠
+
+**垂直方向**上相邻的2个margin(**margin-top、margin-bottom**)有可能会**合并为1个margin**，这种现象叫做collapse(折叠)
+
+**水平方向**上的margin(margin-left、margin-right)永**远不会collapse**  margin会相加
+
+**折叠后最终值的计算规则**
+
+- 两个值进行比较，**取较大的值**
+
+**如何防止margin collapse?**
+
+- **只设置其中一个元素的margin**
+
+**上下margin折叠的情况**
+
+- 两个**兄弟块级元素之间上下margin的折叠**
+- **父子块级元素之间margin的折叠**
+
+<img src="/Users/wsp/Documents/Front-End/Code/Learn_HTML_CSS/img/collapse1.png" alt="collapse1" style="zoom:67%;" />
+
+![collapse2](/Users/wsp/Documents/Front-End/Code/Learn_HTML_CSS/img/collapse2.png)
+
+
+
+
+
+## 元素的水平居中方案
+
+ 在一些需求中，需要元素在父元素中水平居中显示(父元素一般都是块级元素、inline-block)
+
+- 行内级元素(包括inline-block元素)
+  - 水平居中:在**父元素中设置text-align: center**
+
+- 块级元素
+  - 水平居中:**margin: 0 auto**
+  - `display: inline-block;` 然后`text-align: center`
+
+块级元素 block box 
+
+**block盒子宽度=width + padding + · + margin(自动填充到最右)**
+
+```css
+margin-left: auto;
+margin-right: auto;
+margin-top: 0;
+margin-bottom: 0;
+/*等价于*/
+margin: 0 auto
+```
+
+
+
+## **外轮廓** - outline
+
+**outline表示元素的外轮廓**
+
+- **不占用空间**
+
+- **默认显示在border的外面**
+
+**outline相关属性有**
+
+- `outline-width:` 外轮廓的宽度
+
+- `outline-style`:取值跟border的样式一样，比如solid、dotted等
+
+- `outline-color`: 外轮廓的颜色
+- `outline`  outline-width、outline-style、outline-color的简写属性，跟border用法类似
+
+应用实例
+
+- 去除a元素、input元素的focus轮廓效果
+  - `outline:none;`
+
+![outline](/Users/wsp/Documents/Front-End/Code/Learn_HTML_CSS/img/outline.png)
+
+
+
+## 盒子阴影 – box-shadow
+
+**box-shadow属性可以设置一个或者多个阴影**
+
+**每个阴影用<shadow>表示**
+
+多个阴影之间用**逗号,**隔开，从前到后叠加
+
+**<shadow>的常见格式如下**
+
+- none
+
+- 第1个<length>:**offset-x, 水平方向的偏移，正数往右偏移**
+- 第2个<length>:**offset-y, 垂直方向的偏移，正数往下偏移**
+- 第3个<length>:**blur-radius, 模糊半径**
+- 第4个<length>:**spread-radius, 延伸半径**
+- <color>:**阴影的颜色，如果没有设置，就跟随color属性的颜色**
+- **inset:外框阴影变成内框阴影**
+
+```css
+box-shadow: 5px 5px 10px orange, 10px 10px 10px green;
+```
+
+### 在线配置
+
+https://html-css-js.com/css/generator/box-shadow/
+
+
+
+## 文字阴影 - text-shadow
+
+**text-shadow用法类似于box-shadow，用于给文字添加阴影效果**
+
+ 常见格式相当于box-shadow, 它没有spread-radius的值;
+
+
+
+## 行内非替换元素的注意事项
+
+**以下属性对行内级非替换元素不起作用**
+
+- width、height、margin-top、margin-bottom
+
+**以下属性对行内级非替换元素的效果比较特殊**
+
+-  内边距: padding
+  - 特殊: 上下会被撑起来, 但是不占据空间
+- 边框:  border
+  - 特殊: 上下会被撑起来, 但是不占据空间 
+- 外边距: margin
+  - 上下的margin是不生效的
+
+## CSS属性 - box-sizing 
+
+**box-sizing用来设置盒子模型中宽高的行为**
+
+- content-box
+  - padding、border**都布置在width、height外边**
+
+- **border-box** 边框盒子
+  - padding、border**都布置在width、height  里边**
+
+![ie盒子模型](/Users/wsp/Documents/Front-End/Code/Learn_HTML_CSS/img/ie盒子模型.png)

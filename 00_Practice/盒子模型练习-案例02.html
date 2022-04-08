@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    body{
+      background-color: #f5f5f5;
+      text-align: center;
+    }
+
+    .item{
+      text-decoration: none;
+      font-size: 12px;
+      color: #333;
+      display: inline-block;
+      width: 234px;
+      height: 300px;
+      text-align: center;
+      background-color: #fff;
+      
+      padding:20px 10px;
+      box-sizing: border-box;
+
+
+    }
+    .item:hover{
+      box-shadow: 0 2px 10px rgba(0, 0, 0, .1);
+    }
+
+    .item img{
+      width: 160px;
+      height: 160px;
+
+    }
+    .item .title{
+      margin-top:14px;
+    }
+    .item .desc{
+      margin-top: 8px;
+      color: #999;
+      /* 不换行 多余文字显示省略号 */
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .item .price{
+      margin-top:10px;
+      font-size: 14px;
+    }
+    .item .new-price{
+      color: #ff6700;
+      
+      
+    }
+    .item .old-price{
+      color: #999;
+      text-decoration: line-through;
+    }
+
+  </style>
+</head>
+<body>
+<a class="item" href="#" >
+  <img src="../images/xiaomi01.webp" alt="">
+  <div class="title">小米平板5</div>
+  <div class="desc">11英寸大屏|2.5K超清显示11英寸大屏|2.5K超清显示11英寸大屏|2.5K超清显示</div>
+  <div class="price">
+    <span class="new-price">1999元起</span>
+    <span class="old-price">9999元</span>
+  </div>
+</a>
+</body>
+</html>

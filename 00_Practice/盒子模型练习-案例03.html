@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    a{
+      color: #333;
+      text-decoration:none;
+    }
+    .item{
+      color: #333;
+      width: 300px;
+      margin: 0 auto;
+    }
+    .item .album img{
+      width: 100%;
+      border-radius: 8px;
+    }
+    .item .desc .title{
+      font-size:15px;
+
+      /* 显示一行 */
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+    }
+
+    .item .desc .author{
+      font-size:14px;
+      margin-top:3px;
+      color: #888;
+    }
+    .item .desc .author::before{
+      content:url(../images/widget-up.svg);
+      display: inline-block;
+      width:20px;
+      position: relative;
+      top: 3px;
+  }
+
+  </style>
+
+</head>
+<body>
+  <div class="item">
+    <div class="album">
+      <a href="#">
+        <img src="https://i1.hdslb.com/bfs/archive/60be8bba6e9648ff29e008752ed0fecc45c55714.png@672w_378h_1c.webp"  referrerpolicy="no-referrer" alt="">
+      </a>
+     
+    </div>
+    <span class="desc">
+      <!-- <img class="ad" src="../images/ad.png" alt=""> -->
+      <a href="#">
+        <div class="title">你热爱的就是你的生活你热爱的就是你的生活你热爱的就是你的生活你热爱的就是你的生活你热爱的就是你的生活</div>
+      </a>
+      
+      <a class="author" href="#">
+        <span class="nickname">bilibili</span>
+        <span class="time">4-1</span>
+      </a>
+    </div>
+  </div>
+</body>
+</html>
