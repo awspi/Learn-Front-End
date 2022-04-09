@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+<!-- 1. 先完成结构
+2. 重置样式(body/a/ul) 3. 先整体, 后局部
+* 顺序: 按照从外往里. 从上往下 4. 去除重复的代码(css)
+* 将重复的逻辑放到一个单独的class中(.icon) * 不同的代码抽到不同的class(.new .hot)  -->
+  <style>
+    body,ul,li,a{
+      padding: 0;
+      margin: 0;
+      font-size: 16px;
+      background-color:#f5f5f5;
+    }
+    ul,li,ol{
+      list-style-type: none;
+    }
+    a{
+      text-decoration: none;
+      color: #333;
+    }
+    ul>li{
+      margin-top:15px;
+    }
+
+    ul>li>a{
+      display: inline-block;
+    }
+
+    ul>li .content{
+      display: inline-block;
+    
+    }
+    ul>li .icon{
+      position: relative;
+      top:2px;
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+    }
+    ul>li .new{
+      background-image: url(../images/new_icon.svg);
+    }
+    ul>li .hot{
+      background-image: url(../images/hot_icon.svg);
+    }
+
+    ul>li .ranking{
+      display: inline-block;
+      width:24px;
+      height:24px;
+      margin-right: 3px;
+      text-align: center;
+      line-height:24px;
+      font-weight: 700;
+      font-size: 20px;
+      color:#999;
+    }
+    /* 结构伪类 xxx:nth-child() 不加空格*/
+    ul>li:nth-child(1) .ranking{
+      color: #ffd683;
+    }
+    ul>li:nth-child(2) .ranking{
+      color: #b5eafb;
+    }
+    ul>li:nth-child(3) .ranking{
+      color: #fed0dd;
+    }
+
+
+    ul>li>a:hover{
+      color: #00AEEC;
+    }
+
+
+
+
+  </style>
+</head>
+<body>
+  <ul>
+    <li class="item">
+      <a href="#">
+      <span class="ranking">1</span>
+        <div class="content">猫咪身手大挑战</div>
+      <i class="icon hot"></i>
+    </a>
+    </li>
+    <li class="item">
+      <a href="#">
+      <span class="ranking">2</span>
+        <div class="content">坚持自律的1884天！今天又是开心快乐的一天～</div>
+      <i class="icon hot"></i>
+    </a>
+    </li>
+    <li class="item">
+      <a href="#">
+      <span class="ranking">3</span>
+        <div class="content">凤凰传奇翻唱孤勇者】去吗？去啊！！战吗？战啊！！！</div>
+      <i class="icon new "></i>
+    </a>
+    </li>
+    <li class="item">
+      <a href="#">
+      <span class="ranking">4</span>
+        <div class="content">"谷爱凌是爱吃馅饼"</div>
+      <i class="icon new"></i>
+    </a>
+    </li>
+    <li class="item">
+      <a href="#">
+      <span class="ranking">5</span>
+        <div class="content">“成熟一点吧，少年”</div>
+      <i class="icon"></i>
+    </a>
+    </li>
+  </ul>
+</body>
+</html>
