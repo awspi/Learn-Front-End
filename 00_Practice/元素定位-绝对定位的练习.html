@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+<style>
+  /* 重置代码 */
+  a{
+    text-decoration: none;
+    color: #333;
+  }
+  /* 公共的spire */
+  .spire_01{
+    background-image: url("../images/music_sprite_01.png");
+    display: inline-block;
+  }
+  .spire_02{
+    background-image: url("../images/music_sprite_02.png");
+    display: inline-block;
+  }
+  /* 布局代码 */
+  .item {
+    width: 140px;
+    margin: 0 auto;
+  }
+  .item .top {
+    position: relative;
+    /* background-color: #f00; */
+  }
+  .item .top img{
+    /* 将图片下面的多出来的区域去除 */
+    /* vertical-align: top; */
+    display: block;
+  }
+  .item .top .cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom:0 ;
+    right: 0;
+    /* background-image: url("../images/music_sprite_01.png"); */
+    background-position: 0 0;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+  }
+  .item .top .info{
+    position: absolute;
+    padding-left: 10px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height:27px;
+    /* background-color: rgba(69, 64, 64, 0.5); */
+    /* background-image: url("../images/music_sprite_01.png"); */
+    background-position: 0 -537px;
+
+    font-size: 14px;
+    color: rgb(232, 232, 232);
+    line-height: 27px;
+  }
+  .item .top .info .icon-music{
+    /* display: inline-block; */
+    width: 14px;
+    height: 10px;
+    /* background-image: url(../images/music_sprite_02.png); */
+    background-position: 0 -24px;
+  }
+  .item .top .info .icon-play{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 10px;
+    margin: auto 0;
+    width: 16px;
+    height: 17px;
+    /* display: inline-block;
+    background-image: url(../images/music_sprite_02.png); */
+    background-position: 0 0;
+    /* position: relative;
+    top: 5px;
+    display: inline-block;
+    width: 16px;
+    height: 17px;
+    background-image: url(../images/music_sprite_02.png);
+    background-position: 0 0; */
+  }
+  .item .top .info .count{
+    margin-left: 5px;
+  }
+  .item .bottom{
+    display: block;
+    margin-top: 5px;
+    font-size: 14px; 
+  }
+  .item .bottom:hover{
+    text-decoration:underline;
+  }
+
+</style>
+</head>
+<body>
+  
+  <div class="item">
+    <div class="top"> 
+        <img src="../images//music_album01.jpg" alt="">
+        <a class="cover spire_01"  href="#"></a>
+        <div class="info spire_01">
+          <i class="icon-music spire_02"></i>
+          <span class="count">666万</span>
+          <i class="icon-play spire_02"></i>
+        </div>
+    </div>
+    <a class="bottom" href="#">2022年BBMA公告牌音乐大奖提名名单</a>
+
+
+  </div>
+  
+
+</body>
+</html>

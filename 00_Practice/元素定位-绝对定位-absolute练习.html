@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<!-- 父相子绝 -->
+<style>
+  .container{
+    width:600px;
+    height:500px;
+    background-color: #ff0;
+    position: relative;
+  }
+  .box{
+    width: 500px;
+    height: 400px;
+    background-color: #f00;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  img{
+    width:100px;
+  }
+  strong{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+/* 子绝夫绝 */
+</style>
+
+<body>
+  
+  <div class="container">
+    <div class="box">
+      <span>span</span>
+      <strong>strong</strong>
+      <img src="../images/gouwujie01.jpg" alt="">
+      <div>div</div>
+    </div>
+  </div>
+</body>
+</html>

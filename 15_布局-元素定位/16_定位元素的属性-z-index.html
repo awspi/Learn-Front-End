@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .item {
+      position: fixed;
+      width: 100px;
+      height: 100px;
+      right: 0;
+      top: 0;
+      background-color: #f00;
+    }
+
+    .box1 {
+      right: 20px;
+      top: 20px;
+      background-color: #0f0;
+      z-index: 1;
+    }
+
+    .box2 {
+      right: 40px;
+      top: 40px;
+      background-color: #00f;
+      z-index: 2;
+    }
+    .box3 {
+      right: 60px;
+      top: 60px;
+      background-color: rgb(255, 208, 0);
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="item ">0</div>
+  <div class="item box1">1</div>
+  <div class="item box2">2</div>
+  <div class="item box3">-1</div>
+</body>
+</html>

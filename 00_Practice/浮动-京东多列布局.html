@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+    }
+    /* 公共的class */
+    .wrapper{
+      width: 600px;
+      height: 300px;
+      background-color: #fe0;
+      
+    }
+    .item{
+      width: 112px;
+      height: 80px;
+      background-color: #fff;
+      float: left;
+      margin-right: 10px;
+    }
+
+
+    /* 可能有兼容问题 */
+    /* .item:nth-child(5n){
+      margin-right: 0;
+    } */
+
+    /* 没有兼容问题 但是麻烦 */
+    /* .item.last-item{
+      margin-right: 0;
+    } */
+    /* 放在box里,box设置margin-right=-10px */
+    .box{
+      /* 把box的right截了10px,右侧的10px被截了所以能放下了 */
+      margin-right:-10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+   <div class="box">
+    <div class="item item1">1</div>
+    <div class="item item2">2</div>
+    <div class="item item3">3</div>
+    <div class="item item4">4</div>
+    <div class="item item5 last-item">5</div>
+   </div>
+  </div>
+</body>
+</html>

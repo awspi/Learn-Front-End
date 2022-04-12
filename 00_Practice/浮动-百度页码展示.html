@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 重置 */
+    ul,li{
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    a{
+      text-decoration: none;
+      color: #333;
+    }
+    body{
+      background-color: #f2f2f2;
+    }
+    /* 布局 */
+    ul>li{
+      float: left;
+      
+      margin-right: 10px;
+     
+      
+    }
+    ul>li>a{
+      display: inline-block;
+      background-color: #fff;
+      border-radius:6px;
+      width: 36px;
+      height: 36px;
+      text-align: center;
+      line-height: 36px;
+      color: #3951b3;
+      font-size: 14px;
+    }
+    ul>li.next>a{
+      width: 80px;
+    }
+    /* 后代选择器+并集选择器 */
+    ul>li>a:hover,ul>li.active>a{
+      color: #fff;
+      background-color: #4e6ef2;
+    }
+
+  </style>
+</head>
+<body>
+  <ul>
+    <li class="item"><a href="#">1</a></li>
+    <li class="item"><a href="#">2</a></li>
+    <li class="item"><a href="#">3</a></li>
+    <li class="item"><a href="#">4</a></li>
+    <li class="item"><a href="#">5</a></li>
+    <li class="item active"><a href="#">6</a></li>
+    <li class="item"><a href="#">7</a></li>
+    <li class="item"><a href="#">8</a></li>
+    <li class="item"><a href="#">9</a></li>
+    <li class="item"><a href="#">10</a></li>
+    <li class="item next"><a href="#">next &gt</a></a></li>
+  </ul>
+</body>
+</html>
