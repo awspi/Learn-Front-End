@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    .item {
+      color: #333;
+      width: 300px;
+      margin: 0 auto;
+    }
+    .item .album{
+      position: relative;
+    }
+      
+    .item .album img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    .item .album .stats-left{
+      position: absolute;
+      bottom: 5px;
+      padding-left:15px;
+      background-image: linear-gradient(180deg,rgba(255, 120, 221, 0) 0%,rgba(255, 120, 221, 0.8) 100%);
+      height: 20px;
+      width: 285px;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      
+    }
+
+    .item .album .stats-left .icon-play{
+      content: url(../images/bfl.png);
+      width: 16px;
+      
+    }
+    .item .album .stats-left .play-count {
+      position: relative;
+      top: -2px;
+      left: -3px;
+      font-size: 14px;
+      display: inline-block;
+    }
+    .item .album .stats-left .icon-zan{
+      content: url(../images/dz.png);
+      width: 16px;
+    }
+    .item .album .stats-left .dz-count {
+      position: relative;
+      top: -2px;
+      left: -3px;
+      font-size: 14px;
+    }
+    .item .album .stats-left .time {
+      position: absolute;
+      top: 1px;
+      right:10px;
+      font-size: 14px;
+    }
+
+    .item .desc .title {
+      font-size: 15px;
+
+      /* 显示一行 */
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+    }
+
+    .item .desc .author {
+      font-size: 14px;
+      margin-top: 3px;
+      color: #888;
+    }
+
+    .item .desc .author::before {
+      content: url(../images/widget-up.svg);
+      display: inline-block;
+      width: 20px;
+      position: relative;
+      top: 3px;
+      
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="item">
+    <div class="album">
+      <a href="#">
+        <img src="https://i1.hdslb.com/bfs/archive/60be8bba6e9648ff29e008752ed0fecc45c55714.png@672w_378h_1c.webp"
+          referrerpolicy="no-referrer" alt="">
+      </a>
+      <div class="stats-left">
+        <i class="icon-play"></i>
+        <span class="play-count">999.9万</span>
+        <i class="icon-zan"></i>
+        <span class="dz-count">666万</span>
+        <span class="time">1:31</span>
+      </div>
+
+
+    </div>
+    <span class="desc">
+      <!-- <img class="ad" src="../images/ad.png" alt=""> -->
+      <a href="#">
+        <div class="title">你热爱的就是你的生活你热爱的就是你的生活你热爱的就是你的生活你热爱的就是你的生活你热爱的就是你的生活</div>
+      </a>
+
+
+      <a class="author" href="#">
+        <span class="nickname">bilibili2233</span>
+        <span class="time">4-1</span>
+      </a>
+  </div>
+  </div>
+</body>
+
+</html>
