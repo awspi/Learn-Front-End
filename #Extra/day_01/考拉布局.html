@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <style>
+    .sport{
+      height: 100px;
+      margin-top: 20px;
+      background-color: orange;
+    }
+
+    .sport .item{
+      float: left;
+      height: 541px;
+      /* 下面一行271 上面270 */
+    }
+
+    .sport .item.left{
+      width: 330px;
+      background:mediumaquamarine;
+    }
+    .sport .item.center{
+      width: 550px;
+      background:skyblue;
+      
+    }
+    .sport .center .center-item{
+      float: left;
+      width: 275px;
+      /* 上面一行下边框被盖住1px,相当于只🈶有269px 所以+1  */
+      height: 271px;
+      background:skyblue;
+      
+      box-sizing: border-box;
+      border:1px solid black;
+      border-left: none;
+    }
+    /* 结构伪类 倒数两个 */
+    .sport .center .center-item:nth-last-child(-n+2){
+      margin-top: -1px;
+    }
+    .sport .item.right{
+      width: 220px;
+      background:lavenderblush;
+    }
+    .sport .right .item{
+      float: left;
+      width: 220px;
+
+      height: 121px;
+      background:lavenderblush;
+
+      box-sizing: border-box;
+      border:1px solid black;
+      border-left: none;
+      margin-top: -1px;
+    }
+    .sport .right .item.header{
+      margin-top: 0;
+      height: 61px;
+    }
+
+  </style>
+</head>
+<body>
+   <div class="cl_wrapper sport" >
+     <div class="item left"></div>
+     <div class="item center">
+        <div class="center-item">1</div>
+        <div class="center-item">2</div>
+        <div class="center-item">3</div>
+        <div class="center-item">4</div>
+     </div>
+     <div class="item right">
+       <div class="item header">header</div>
+       <div class="item">1</div>
+       <div class="item">2</div>
+       <div class="item">3</div>
+       <div class="item">4</div>
+     </div> 
+   </div>
+</body>
+</html>
