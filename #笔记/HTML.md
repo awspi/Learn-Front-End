@@ -48,7 +48,12 @@
 **标题** **(Heading)** **元素**呈现了六个不同的级别的标题
 
 - Heading是头部的意思，通常会用来做标题
--   <h1> 级别最高，而 <h6> 级别最低。 (其实就是css样式不同)
+
+- ```
+  <h1> 级别最高，而 <h6> 级别最低。 (其实就是css样式不同)
+  ```
+
+  
 
 ```html
   <!-- h元素 h1~h6 -->
@@ -82,7 +87,7 @@
 
 
 
-### 
+
 
 ### img
 
@@ -196,8 +201,10 @@ a标签用于跳转到新链接
 
 
 
-```
-
+```html
+  <a href="https://github.com/" target="_blank">
+    <img src="/images/muxing.jpg" alt="">
+  </a>
 ```
 
 
@@ -308,7 +315,7 @@ HTML 实体是一段**以连字号(&)开头、以分号(;)结尾**的文本(字�
 - 实体常常用于显示保留字符(这些字符会被解析为 HTML 代码)和不可见的字符(如“不换行空格”); 
 -  也可以用实体来代替其他难以用标准键盘键入的字符;
 
-* 三个常用:
+* **三个常用:**
 
 ```
   &nbsp;
@@ -348,9 +355,8 @@ URL 代表着是统一资源定位符(Uniform Resource Locator)
   - URL = Uniform Resource Locator **统一资源定位符**，俗称网络地址，相当于网络中的门牌号;
 - URI在某一个规则下能把一个资源独一无二的识别出来。
   - URL作为一个网络Web资源的地址，可以唯一将一个资源识别出来，所以URL是一个URI; 
-  - 所以URL是URI的一个子集;
+  - **所以URL是URI的一个子集;**
   - 但是URI并不一定是URL
 
 locators are also identifiers, so every URL is also a URI, but there are URIs which are not URLs.
 
-## 

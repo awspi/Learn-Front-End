@@ -6,11 +6,11 @@
   - **会盖在**(不是覆盖)background-color的上面 
 
 - 如果设置了**多张图片**
-  - 设置的第一张图片将显示在最上面，其他图片按顺序层叠在下面
+  - 设置的**第一张图片将显示在最上面，其他图片按顺序层叠在下面**
 
 **如果设置了背景图片后，元素没有具体的宽高，背景图片是不会显示出来的**
 
-```
+```css
  background-image: url(../images/kobe01.jpg), url(../images/kobe02.png);
 ```
 
@@ -53,9 +53,9 @@ background-repeat: no-repeat;
 background-position用于设置背景图片在水平、垂直方向上的具体位置 
 
 - 可以设置具体的数值 比如 20px 30px;
-- 水平方向还可以设值:left、center、right
-- 垂直方向还可以设值:top、center、bottom
-- 如果只设置了1个方向，另一个方向默认是center
+- **水平方向**还可以设值:left、center、right
+- **垂直方向**还可以设值:top、centebr、bottom
+- 如果**只设置了1个方向，另一个方向默认是center**
 
 ![background-position](/Users/wsp/Documents/Front-End/Code/Learn_HTML_CSS/img/background-position.png)
 
@@ -66,14 +66,13 @@ background-position用于设置背景图片在水平、垂直方向上的具体�
 
   background-image: url(../images/mhxy.jpg);
   background-position: center;
+  background-position: 30px 40px;
 }
 ```
 
 ## background-attachment
 
- **background-attachment决定背景图像的位置是在视口内固定，或者随着包含它的区块滚动。**
-
-用的不多
+ **background-attachment决定背景图像的位置是在<u>视口</u>内固定，或者随着包含它的区块滚动。**(用的不多)
 
  可以设置以下3个值
 
@@ -109,7 +108,7 @@ background是一系列背景相关属性的**简写属性**
 
 
 
-总结
+**总结**
 
 - img，作为网页内容的重要组成部分，比如广告图片、LOGO图片、文章配图、产品图片
 - background-image，可有可无。有，能让网页更加美观。无，也不影响用户获取完整的网页内容信息

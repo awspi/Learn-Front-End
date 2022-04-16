@@ -1,18 +1,16 @@
 # CSS盒子模型
 
-
-
 HTML每一个元素看出一个个的盒子:
 
 <img src="/Users/wsp/Documents/Front-End/Code/Learn_HTML_CSS/img/box0.png" alt="box0" style="zoom:67%;" />
 
--  内容(content)
+-  **内容(content)**
   - 元素的内容width/height
-- 内边距(padding)
+- **内边距(padding)**
   - 元素和内容之间的间距
-- 边框(border)
+- **边框(border)**
   - 元素自己的边框
-- 外边距(margin)
+- **外边距(margin)**
   - 元素和其他元素之间的间距
 
 因为盒子有四边, 所以margin/padding/border都包括**top/right/bottom/left**四个边:
@@ -34,12 +32,12 @@ HTML每一个元素看出一个个的盒子:
 
 默认值为auto
 
-注意: 对于行内级非替换元素来说, 设置宽高是无效的!
+注意: 对于**行内级非替换元素(inline-level)来说, 设置宽高是无效的!**
 
 另外我们还可以设置如下属性:
 
-- `min-width`:最小宽度，无论内容多少，宽度都大于或等于min-width
-- `max-width`:最大宽度，无论内容多少，宽度都小于或等于max-width 
+- **`min-width`**:最小宽度，无论内容多少，宽度都大于或等于min-width
+- **`max-width`:**最大宽度，无论内容多少，宽度都小于或等于max-width 
 
 移动端适配时, 可以设置**最大宽度和最小宽度;**
 
@@ -69,11 +67,10 @@ max-height:最大高度，无论内容多少，高度都小于或等于max-heigh
 
 ## 内边距 - padding
 
-
-
  padding属性用于设置盒子的内边距, 通常用于**设置边框和内容之间的间距;**
 
-- **在父子元素中,父元素设置padding,如果不想父元素被子元素撑大,可以设置` box-sizing: border-box;`**
+- **在<u>父子元素</u>中,父元素设置padding,**
+- **如果不想父元素被子元素撑大,可以设置` box-sizing: border-box;`**
 
 padding包括四个方向, 所以有如下的取值: 
 
@@ -85,7 +82,7 @@ padding包括四个方向, 所以有如下的取值:
 padding单独编写是一个**缩写属性**:
 
 - padding-top、padding-right、padding-bottom、padding-left的简写属性
-- padding缩写属性是**从零点钟方向开始, 沿着顺时针转动的, 也就是 上右下左;**
+- padding缩写属性是**从零点钟方向开始, 沿着<u>顺时针转动</u>的, 也就是 上右下左;**
 
 不一定要写全
 
@@ -141,13 +138,13 @@ padding单独编写是一个**缩写属性**:
 
 - 边框宽度
   - border-top-width、border-right-width、border-bottom-width、border-left-width
-  - border-width是上面4个属性的简写属性
+  - **border-width**是上面4个属性的简写属性
 - 边框颜色
   - border-top-color、border-right-color、border-bottom-color、border-left-color
-  -  border-color是上面4个属性的简写属性
+  -  **border-color**是上面4个属性的简写属性
 - 边框样式
   - border-top-style、border-right-style、border-bottom-style、border-left-style
-  - border-style是上面4个属性的简写属性
+  - **border-style**是上面4个属性的简写属性
 
 边框样式
 
@@ -199,14 +196,14 @@ padding单独编写是一个**缩写属性**:
 
  border-radius常见的值:
 
-- 数值: 通常用来设置小的圆角, 比如6px;
+- **数值**: 通常用来设置小的圆角, 比如6px;
 - 百分比: 通常用来设置一定的弧度或者圆形;
 
 border-radius事实上是一个**缩写属性**:
 
 - 将这四个属性 border-top-left-radius、border-top-right-radius、border-bottom-right-radius，和 border-bottom- left-radius 简写为一个属性。
 
-如果一个元素是正方形, **设置border-radius大于或等于50%时，就会变成一个圆.**
+如果一个元素是正方形, **<u>设置border-radius大于或等于50%时，就会变成一个圆</u>.**
 
 ![border-radius](/Users/wsp/Documents/Front-End/Code/Learn_HTML_CSS/img/border-radius.png)
 
@@ -223,7 +220,7 @@ margin包括四个方向, 所以有如下的取值:
 - `margin-bottom`:下内边距
 - `margin-left`:左内边距
 
-*行内级元素设置上下无效*
+***行内级元素设置上下无效***
 
 margin单独编写是一个**缩写属性**:
 
@@ -234,13 +231,17 @@ margin也并非必须是四个值, 也可以有其他值;
 
 ![margin](/Users/wsp/Documents/Front-End/Code/Learn_HTML_CSS/img/margin.png)
 
+- `margin:0,auto;`水平居中
 
+### margin塌陷
 
-###  上下margin的传递
+####  上下margin的传递
 
 **margin-top传递**
 
 如果**块级元素的顶部线和父元素的顶部线重叠**，那么**这个块级元素的margin-top值会传递给父元素** 
+
+
 
 **margin-bottom传递** 比较少见
 
@@ -261,7 +262,7 @@ margin也并非必须是四个值, 也可以有其他值;
 
 
 
-### 上下margin的折叠
+#### 上下margin的折叠
 
 **垂直方向**上相邻的2个margin(**margin-top、margin-bottom**)有可能会**合并为1个margin**，这种现象叫做collapse(折叠)
 
@@ -290,12 +291,12 @@ margin也并非必须是四个值, 也可以有其他值;
 
 ## 元素的水平居中方案
 
- 在一些需求中，需要元素在父元素中水平居中显示(父元素一般都是块级元素、inline-block)
+ 在一些需求中，需要<u>元素在父元素中水平居中显示(</u>父元素一般都是块级元素、inline-block)
 
-- 行内级元素(包括inline-block元素)
-  - 水平居中:在**父元素中设置text-align: center**
+- **行内级元素(包括inline-block元素)**
+  - 水平居中:在**父元素中设置text-align: center** (只能文字)
 
-- 块级元素
+- **块级元素**
   - 水平居中:**margin: 0 auto**
   - `display: inline-block;` 然后`text-align: center`
 
@@ -379,18 +380,21 @@ https://html-css-js.com/css/generator/box-shadow/
 
 ## 行内非替换元素的注意事项
 
-**以下属性对行内级非替换元素不起作用**
+**以下属性对行内级非替换元素<u>不起作用</u>**
 
-- width、height、margin-top、margin-bottom
+(inline-level不能设置宽高)
 
-**以下属性对行内级非替换元素的效果比较特殊**
+- width、height、**margin-top、margin-bottom**
+
+**以下属性对行内级非替换元素的效果比较<u>特殊</u>**
 
 -  内边距: padding
-  - 特殊: 上下会被撑起来, 但是不占据空间
+  - 特殊:  左右有空间,上下会被撑起来,但是不占据空间
 - 边框:  border
-  - 特殊: 上下会被撑起来, 但是不占据空间 
+  - 特殊: **左右有空间**,**上下会被撑起来,** 但是**不占据空间** 
+  - ![inline-border](/Users/wsp/Documents/Front-End/Code/Learn_HTML_CSS/img/inline-border.png)
 - 外边距: margin
-  - 上下的margin是不生效的
+  - **上下的margin是不生效的**
 
 ## CSS属性 - box-sizing 
 

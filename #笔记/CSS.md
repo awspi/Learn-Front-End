@@ -1,9 +1,5 @@
 # CSS
 
-
-
-
-
 CSS的出现是为了美化HTML的，并且让结构(HTML)与样式(CSS)分离;
 
 - 美化方式一:为HTML添加各种各样的样式，比如颜色、字体、大小、下划线等等; 
@@ -17,11 +13,7 @@ CSS的出现是为了美化HTML的，并且让结构(HTML)与样式(CSS)分离;
 
 * 内联样式
 
-
-
 * 内部样式
-
-
 
 * 外部样式
 
@@ -75,10 +67,6 @@ CSS的出现是为了美化HTML的，并且让结构(HTML)与样式(CSS)分离;
   <div class="title">Hello World</div>
 </body>
 ```
-
-### 
-
-
 
 
 
@@ -135,7 +123,7 @@ CSS的出现是为了美化HTML的，并且让结构(HTML)与样式(CSS)分离;
 
 ## CSS属性 - 文本
 
-### **text-decoration**(了解)
+### **text-decoration**
 
 用于设置文字的装饰线
 
@@ -149,9 +137,7 @@ CSS的出现是为了美化HTML的，并且让结构(HTML)与样式(CSS)分离;
 
 *a元素有下划线的本质是被添加了text-decoration属性*
 
-### text-transform
-
-用于设置			
+### text-transform		
 
  text-transform有几个常见的值:
 
@@ -176,11 +162,25 @@ text-indent: 2em; 是缩进2个文字
 
 **定义行内内容(例如文字)如何相对它的块父元素对齐**
 
-只对**行内级(inline-level)元素有效**‼️
+只对**块级(block-level)元素有效**‼️
 
-行内级元素: 包括行内非替换元素**span/a** 行内替换元素**img/input/inline-block**
+行内级元素: 包括<u>行内非替换元素</u>**span/a** <u>行内替换元素*</u>*img/input/inline-block**
 
-- 块级元素设置`display: inline-block;`
+- 行内级元素设置`display: block;`
+
+```html
+.text1{
+display: block;
+text-align: center;
+}
+.text2{
+text-align: center;
+}
+ <span class="text1">123</span>
+ <div class="text2">111</div>
+```
+
+
 
 常用值
 
@@ -191,9 +191,13 @@ text-indent: 2em; 是缩进2个文字
 
 ![text-align](/Users/wsp/Documents/Front-End/Code/Learn_HTML_CSS/img/text-align.png)
 
+
+
 ### letter-word-spacing
 
 分别用于设置字母、单词之间的间距
+
+
 
 ## CSS属性 - 字体
 
@@ -222,8 +226,6 @@ text-indent: 2em; 是缩进2个文字
   ```
 
   
-
-
 
 ### font-family(重要)
 
@@ -256,9 +258,8 @@ body {
 - **100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900** 
   - 每一个数字表示一个重量 
 
-**normal**:等于400
-
-**bold**:等于700
+- **normal**:等于400
+- <u>**bold**:等于700</u>
 
 *strong、b、h1~h6等标签的font-weight默认就是bold*
 
@@ -267,7 +268,7 @@ body {
 用于设置文字的常规、斜体显示
 
 - **normal**:常规显示
-- **italic**(斜体):用字体的斜体显示(通常会有专门的字体)
+- **<u>italic</u>**(斜体):用字体的斜体显示(通常会有专门的字体)
 - **oblique**(倾斜):文本倾斜显示(仅仅是让文字倾斜)
 
 *em、i、cite、address、var、dfn等元素的font-style默认就是italic*
@@ -285,11 +286,11 @@ body {
 
 
 
-### line-height(常用)
+### line-height(常用)‼️
 
 **用于设置文本的行高** 
 
-撑起block的高度
+撑起**块级元素**的高度
 
 **行高:**简单理解为一行文字所占据的高度
 
@@ -341,9 +342,9 @@ font 属性可以用来作为` font-style, font-variant, font-weight, font-size,
 font: italic small-caps 700 30px/1.5 serif;
 ```
 
-## CSS选择器
 
 
+## CSS选择
 
 ###  统配选择器
 
@@ -540,11 +541,15 @@ background-color: green;
       color: red;
       font-size: 30px;
     }
+    .item.item1{
+      color:green;
+    }
   </style>
 <body>
   
   <div class="box">我是div元素</div>
   <p class="box">我是p元素</p>
+  <div class="item item1">item1</div>
 
 </body>
 ```
@@ -684,18 +689,20 @@ Pseudo-classes
 - :first-line、`::first-line` (了解)
   - ::first-line可以针对首行文本设置属性
   - ::first-letter可以针对首字母设置属性
-  
 - :first-letter、`::first-letter`(了解)
+
+
 
 - **:before**、`::before` **(常用)**‼️
 
 - **:after**、`::after` **(常用)**‼️
-  
+
   - 用来在一个元素的内容**之前或之后插入其他内容(可以是文字、图片)**
-    - 常通过 **content 属性**来为一个**行内级元素**添加修饰性的内容。**不能将`content:""`省略**
+    - 常通过 **content 属性**来为一个**行内级元素**添加修饰性的内容。
     
-      - **不是行内级不生效**,块级可以设置display:inline-block;
-    
+      - **不能将`content:""`省略**
+      - **只能用于行内级**,块级可以设置display:inline-block;
+      
       
 
 为了区分伪元素和伪类，建议**伪元素使用2个冒号**，比如::first-line
@@ -806,11 +813,10 @@ Pseudo-classes
 -  **:nth-child(1)**
   - 是父元素中的第1个子元素
 - **:nth-child(2n)** n代表任意正整数和0
-  - 是父元素中的第偶数个子元素(第2、4、6、8......个) 
-  - 跟:nth-child(**even**)同义
-- **:nth-child(2n + 1)**
-  - n代表任意正整数和0
-  - 是父元素中的第奇数个子元素(第1、3、5、7......个) 
+  - **是父元素中的第偶数个子元素(第2、4、6、8......个)** 
+  - 跟:nth-child(**even**)同义 even偶数
+- **:nth-child(2n + 1)** n代表任意正整数和0
+  - 是父元素中的**第奇数个子元素(第1、3、5、7......个)** 
   - 跟:nth-child(**odd**)同义
 - **nth-child(-n + 2)**代表前2个子元素
 
@@ -818,16 +824,20 @@ Pseudo-classes
 
  **:nth-last-child( )**
 
-:nth-last-child()的语法跟:nth-child()类似，不同点是:nth-last-child()**从最后一个子元素开始往前计数** 
+:nth-last-child()的语法跟:nth-child()类似<u>，不同点是:nth-last-child()**从最后一个子元素开始往前计数**</u> 
 
 - :nth-last-child(1)，代表倒数第一个子元素
-- :nth-last-child(-n + 2)，代表最后2个子元素
+- **:nth-last-child(-n + 2)，代表最后2个子元素**
 
 
 
 **:nth-of-type()**用法跟**:nth-child()**类似
 
-- 不同点是:nth-of-type()计数时**只计算同种类型**的元素
+- 不同点是:nth-of-<u>type()</u>计数时**只计算同种类型**的元素 不是的会跳过,不计数
+
+- (排除所有的干扰项)
+
+  
 
 **:nth-last-of-type()**用法跟**:nth-of-type()**类似
 
@@ -868,8 +878,8 @@ Pseudo-classes
 
 **其他常见的伪类(了解):**
 
-- `:first-child`，等同于:nth-child(1)
-- `:last-child`，等同于:nth-last-child(1)
+- **`:first-child`**，等同于:nth-child(1)
+- **`:last-child`**，等同于:nth-last-child(1)
 - `:first-of-type`，等同于:nth-of-type(1)
 - `:last-of-type`，等同于:nth-last-of-type(1)
 - `:only-child`，是父元素中唯一的子元素
@@ -884,9 +894,9 @@ Pseudo-classes
 
 #### 否定伪类
 
-:not()的格式是:not(x)
+:not()的格式是**:not(x)**
 
-- x是一个简单选择器
+- x是一个**简单选择器** 
 - 元素选择器、通用选择器、属性选择器、类选择器、id选择器、伪类(除否定伪类)
 
  :not(x)表示除x以外的元素
