@@ -6,7 +6,7 @@
 
 **元素可以膨胀以填充额外的空间, 收缩以适应更小的空间;**
 
-通常我们使用Flexbox来进行布局的方案称之为flex布局(flex layout); flex 布局(Flexible 布局，弹性布局);
+通常我们使用**Flexbox**来进行布局的方案称之为flex布局(flex layout); flex 布局(Flexible 布局，弹性布局);
 
 **flex布局是目前web开发中使用最多的布局方案:**
 
@@ -60,7 +60,7 @@
 
 - flex-flow 简写属性
 - flex-direction 主轴方向
-- flex-wrap 单行多行
+- flex-wrap 换行
 - justify-content 主轴item的分布方式
 - align-items items在交叉轴上的的对齐方式
 - align-content  和justify-content类似 多行items 在 交叉轴 上的对齐方式
@@ -137,7 +137,7 @@ flex-flow 属性是 **flex-direction** 和 **flex-wrap** 的简写。任何顺�
            /* 切换justify-content */
       /* flex-end: 让元素和main end对齐 */
       /* center: 居中对齐 */
-      /* space-between: 两端个放一个元素, 其他多余的元素一定要空间等分 */
+      /* space-between: 两端各放一个元素, 其他多余的元素一定要空间等分 */
       /* space-evenly: 两端也有间距, 并且所有的空间进行等分 */
       /* space-around: 两端也有间距, 两端的间距是items之间的间距一半 */
 ```
@@ -224,13 +224,13 @@ tems 可以通过 **align-self 覆盖 flex container 设置的 align-items**
 
 **flex-grow 决定了 flex items 如何扩展(拉伸/成长)**
 
-(把剩余的size按照各item的flex-grow的比例分给item)
+flexbox不剩空间,**把剩余的size按照各item的flex-grow的比例分给item**
 
 可以设置任意非负数字(正小数、正整数、0)，默认值是 0
 
 当 flex container **在 main axis 方向上有剩余 size 时，flex-grow 属性才会有效**
 
-- 如果**所有 flex items 的 flex-grow 总和 sum 超过 1**，每个 flex item 扩展的 size 为 flex container 的剩余 **size *(flex-grow / sum)**
+- 如果**所有 flex items 的 flex-grow f总和 sum 超过 1**，每个 flex item 扩展的 size 为 flex container 的剩余 **size *(flex-grow / sum)**
 
 - flex items 扩展后的**最终 size** **不能超过 max-width\max-height** 
 

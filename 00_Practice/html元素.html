@@ -50,6 +50,22 @@
       color: white;
       background-color:purple;
     }
+
+    .wrapper{
+      display:flex;
+      background-color: orange;
+      justify-content: space-around;
+      width: 100px;
+      margin: 0 auto;
+    }
+    .wrapper div{
+      /* color: white; */
+      border: 1px solid;
+      background-color: chocolate;
+    }
+    .wrapper div.bxx{
+      flex-grow: 1;
+    }
   </style>
 </head>
 <body>
@@ -81,5 +97,12 @@
 <div class="fix">ffufufu</div>
 <br>
 
+<div class="wrapper">
+  <div class="bx1">1</div>
+  <div class="bx2">2</div>
+  <div class="bx3 bxx">333</div>
+  <div class="bx4">4</div>
+  <div class="bx5">5</div>
+</div>
 </body>
 </html>
