@@ -25,9 +25,35 @@
       border: 10px solid red;
     }
     
+    .box{
+      height: 300px;
+      background-color: #f00;
+      overflow: hidden;
+
+    }
+    .box img{
+      position: relative;
+      transform: translate(-50%);
+      margin-left: 50%;
+    }
+    .fix{
+      position: fixed;
+      right: 100px;
+      bottom: 10px;
+      color:red;
+      border: 3px solid;
+      /* z-index: 1; */
+    }
+    .navi{
+      position: sticky;
+      top:0;
+      color: white;
+      background-color:purple;
+    }
   </style>
 </head>
 <body>
+  <div class="navi">123naviviiiiiii</div>
   <a href="https://github.com/" target="_blank">
     <img src="/images/muxing.jpg" alt="">
   </a>
@@ -49,6 +75,11 @@
  <div>asdasasdasdasdasdsadsad</div>
  <span class="inline1">asdasd</span>
  <span class="inline">asdasd</span>
+
+<br>
+ <div class="box"><img src="../images/diqiu.jpg" alt=""></div>
+<div class="fix">ffufufu</div>
+<br>
 
 </body>
 </html>
