@@ -333,6 +333,6 @@ flex 是 **flex-grow || flex-shrink || flex-basis** 的简写,flex 属性可以�
 
 - 为什么i不显示?
   - 因为没有高度,内容为空
-- 要加几个?
+- 要加几个才能保证不论最后一行有几个元素都可以正常布局?
   - 本来应该是列数-1,只要不满都用i填充
   - 但是justify-content: space-between; 就算只有一个元素,也会两端对齐,所以设置为列数-2
