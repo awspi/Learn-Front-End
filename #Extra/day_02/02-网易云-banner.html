@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../day_02/css/common.css">
+  <link rel="stylesheet" href="../day_02/css/reset.css">
+  <title>Document</title>
+  <style>
+    .banner {
+      height: 285px;
+      background-image: url(../day_02/images/banner-b-01.jpeg);
+      background-size: 6000px;
+      background-position: center center;
+    }
+
+    .banner .area {
+      /* display: flex; */
+      position: relative;
+      height: 285px;
+      width: 982px;
+      /* line-height: 285px; */
+      /* background-color: #fff; */
+    }
+
+    .banner .area .area-left {
+      position: relative;
+      width: 730px;
+      background-color:orange;
+    }
+    .banner .area-left .img-list{
+      display: flex;
+      width: 730px;
+      overflow: hidden;
+    }
+    .banner .area-left .img-list li{
+      flex-shrink: 0;
+      width: 100%;
+    }
+
+    .banner .area-left .img-list .item {
+      display: block;
+      height: 285px;
+    }
+
+    .banner .area-left .img-list .item img {
+      background-color: #fff;
+      height: 285px;
+      width: 100%;
+    }
+    /* dots列表 */
+    .banner .area-left .dots-list{
+      position: absolute;
+      width: 730px;
+      bottom: 5px;
+      display: flex;
+      justify-content: center;
+    }
+    .banner .area-left .dots-list li{
+      margin: 0 3px;
+    }
+    .banner .area-left .dots-list .item{
+      display: block;
+      width: 20px;
+      height: 20px;
+      background-image: url(./images/banner_sprite.png);
+      background-position: 3px -343px;
+    }
+    .banner .area-left .dots-list .item:hover,
+    .banner .area-left .dots-list .item.active{
+      background-position: -16px -343px;
+    }
+    .banner .area .area-right {
+      position: absolute;
+      right: -1px;
+      top: 0;
+      bottom: 0;
+      width: 254px;
+      background:url(../day_02/images/download.png) 0 0;
+    }
+    .banner .area .area-right .download{
+      display: block;
+      width: 215px;
+      height: 56px;
+      margin: 186px 0 0 19px;
+      text-indent: -9999px;
+      
+    }
+    .banner .area .area-right .download:hover{
+      background:url(../day_02/images/download.png) 0 -290px;
+    }
+    .banner .area .area-right .desc{
+      margin-top: 10px;
+      font-size: 12px;
+      color: #8d8d8d;
+      text-align: center;
+    }
+
+    .banner .area .control{
+      position: absolute;
+      display: block;
+      margin: -37px;
+      top: 50%;
+      width: 37px;
+      height: 63px;
+      background-image: url(../day_02/images/banner_sprite.png);
+    }
+    .banner .area .click-left{
+      left: -50px;
+      background-position: 0 -360px;
+    }
+    .banner .area .click-left:hover{
+      background-position: 0 -430px;
+    }
+    .banner .area .click-right{
+      right: -50px;
+      background-position: 0 -508px;
+    }
+    .banner .area .click-right:hover{
+      background-position: 0 -578px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="banner">
+    <div class="area wrapper_03">
+      <div class="area-left">
+        <ul class="img-list">
+          <li>
+            <a href="#" class="item">
+              <img src="../day_02/images/banner-01.jpeg" alt="">
+            </a>
+          </li>
+          <li>
+            <a href="#" class="item">
+              <img src="../day_02/images/banner-01.jpeg" alt="">
+            </a>
+          </li>
+          <li>
+            <a href="#" class="item">
+              <img src="../day_02/images/banner-01.jpeg" alt="">
+            </a>
+          </li>
+        </ul>
+        <ul class="dots-list">
+          <li><a href="#" class="item active"></a></li>
+          <li><a href="#" class="item"></a></li>
+          <li><a href="#" class="item"></a></li>
+          <li><a href="#" class="item"></a></li>
+          <li><a href="#" class="item"></a></li>
+          <li><a href="#" class="item"></a></li>
+          <li><a href="#" class="item"></a></li>
+          <li><a href="#" class="item"></a></li>
+          <li><a href="#" class="item"></a></li>
+          <li><a href="#" class="item"></a></li>
+        </ul>
+      </div>
+      <div class="area-right">
+        <a href="#" class="download">下载</a>
+        <p class="desc">PC 安卓 iPhone WP iPad Mac 六大客户端</p>
+      </div>
+      <a href="#" class="control click-left"></a>
+      <a href="#" class="control click-right"></a>
+    </div>
+  </div>
+</body>
+
+</html>
