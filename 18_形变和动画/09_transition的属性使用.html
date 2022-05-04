@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+      background-color: #f00;
+      width: 300px;
+    }
+
+    .box {
+      position: relative;
+      left: 0;
+
+      width: 100px;
+      height: 100px;
+      background-color: orange;
+
+      /* 告知浏览器 box 在进行一些CSS属性变化的时候有一个过渡效果 */
+      /* transition-property: transform, left; */
+      /* transition-property: all;
+      transition-duration: 1s;
+      transition-timing-function: ease-in;
+      transition-delay: 1s; */
+      
+      /* 简写属性 */
+      transition: all linear 1s;
+    }
+
+    .container:hover .box {
+      /* left: 100px; */
+      transform: translate(100px);
+      
+      width:200px;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="container">
+    <div class="box"></div>
+  </div>
+
+</body>
+</html>

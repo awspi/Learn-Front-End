@@ -1658,7 +1658,7 @@ margin-bottom: 0;
 margin: 0 auto
 ```
 
-
+##   垂直居中 vertical-align: middle; 
 
 ## **外轮廓** - outline
 
@@ -2139,7 +2139,7 @@ clear属性是做什么的呢?
 | absolute positioning(绝对定位) |   层叠布局   |
 | float(浮动)                    |   水平布局   |
 
-
+## 
 
 # CSS Flex布局
 
